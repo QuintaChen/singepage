@@ -1,0 +1,89 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>二维码</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <script language="javascript" src="js/require.js"></script>
+    <script language="javascript" src="js/app/config.js?v=2"></script>
+    <script language="javascript" src="js/dist/jquery-1.11.1.min.js"></script>
+    <script language="javascript" src="js/dist/jquery.gcjs.js"></script>
+   
+	<!-- <script language="javascript">
+	    require(['core','tpl'],function(core,tpl){
+	        core.init({
+	            siteUrl: "http://sz33.61why.com/",
+	            baseUrl: "http://sz33.61why.com/app/index.php?i=6&c=entry&do=ROUTES&m=sz_yi"
+	        });
+
+	    })
+	</script> -->
+	<style>
+		body,div{padding: 0;margin: 0;font-family: 'Microsoft Yahei',Tahoma,Helvetica,Arial,sans-serif;}
+		a,a:hover{text-decoration: none;}
+		.bg{background: rgba(0,0,0,0.3);position: absolute;width: 100%;height: 100%;}
+		.main-box{background: #fff;width: 80%;margin: 20% auto;border-radius: 5px;}
+		header{text-align: center;font-size: 1.3em;line-height: 2.3em;color: #000;}
+		.main-box>section{padding-left: 15px;}
+		button,input[type=button]{border: none;background: transparent;outline: none;}
+		.sel-items{padding: 0 10px;}
+		.sel-items>p{text-indent: 20px;}
+		.btns{padding: 20px 0;text-align: center;}
+		.btns button{padding: 5px 19px;border-radius: 6px;background: #0279FB;border: 1px solid #0279FB;color: #fff;font-size: 1.1em;}
+		.btns button.cancle{background: #fff;color: #666;border: 1px solid #ccc;margin-left: 15px;}
+	</style>
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="core" src="js/app/core.js?v=201510211500"></script>
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="tpl" src="js/app/../dist/tmodjs.js?v=201510211500"></script>
+</head>
+<body>
+   <div class="bg">
+		<div class="main-box">
+			<header>协议</header>
+			
+			<section>
+				<div class="sel-items">
+					<p>1、</p>
+					<p>2、</p>
+					<p>3、</p>
+				</div>
+				<div class="xy">
+					<input type="checkbox" name="xy" value=""><span>已阅读并同意<a href="www.baidu.com">《签订协议》</a></span>
+				</div>
+				<div class="btns">
+					<button class="sub">确定</button>
+				</div>
+			</section>
+		</div>
+	</div>
+	
+<script language="javascript">
+		$("input[name='xy']").click(function(){
+
+			var c = $("input[name='xy']").prop("checked");
+			//console.log(typeof(c));//boolean
+			// if (c===true) {
+			// 	$("input[name='xy']").prop("checked",true);
+			// 	alert(1);
+			// }else{
+			// 	$("input[name='xy']").prop("checked",false);		
+			// 	alert(2);
+			// }
+
+		})
+
+		$(".bg").delegate(".sub","click",function(){
+
+			//console.log($("input[name='xy']").prop("checked"));
+
+			var ck = $("input[name='xy']").prop("checked");
+			console.log(ck===true);
+
+		})
+// require(['tpl', 'core'], function(tpl, core) {
+
+
+// 	core.json('shoperweima',{},function(json){ 
+	
+// 	})
+// });
+</script>
+</body></html>
